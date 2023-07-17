@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { redirect } from "react-router-dom";
+import React, {  useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
-  const google = window.google;
+  // const google = window.google;
   let navigate = useNavigate();
   const [data, setData] = useState({});
   const [errorMessageEmail, setErrorMessageerrorMessageEmail] = useState("");
