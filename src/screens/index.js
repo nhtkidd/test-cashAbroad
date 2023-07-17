@@ -7,6 +7,7 @@ const Index = () => {
   // const google = window.google;
   let navigate = useNavigate();
   const [data, setData] = useState({});
+  const [ user, setUser ] = useState([]);
   const [errorMessageEmail, setErrorMessageerrorMessageEmail] = useState("");
   const [errorMessagePass, setErrorMessageerrorMessagePass] = useState("");
 
@@ -70,8 +71,11 @@ const Index = () => {
   };
 
   const login = useGoogleLogin({
-    onSuccess: (codeResponse) => console.log(codeResponse),
+    onSuccess: (codeResponse) => navigate("/dashboard"),
+    onError: (error) => console.log('Login Failed:', error),
     flow: "auth-code",
+  
+
   });
 
   const MyCustomButton = ()=>{
