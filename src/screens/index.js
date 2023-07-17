@@ -68,6 +68,7 @@ const Index = () => {
           <img
             src={require("../resources/mediumLogo.png")}
             className="w-auto h-16 2xl:h-20"
+            alt='img'
           />
           <h2 className="text-white text-2xl 2xl:text-3xl font-bold">
             Unlock Your Business
@@ -80,7 +81,7 @@ const Index = () => {
       </div>
       <div className="second-container-login w-full lg:w-1/2 h-[100vh] flex justify-center items-center ">
         <div className="form-container w-[360px] h-auto text-center flex flex-col items-center gap-9 ">
-          <img src={require("../resources/Spark.png")} />
+          <img src={require("../resources/Spark.png")}   alt='img' />
           <h2 className="text-2xl font-bold">Good Morning!</h2>
           <div className="button-google flex flex-col gap-2">
             <p className="text-sm font-bold text-[#4B5563]">
@@ -121,6 +122,7 @@ const Index = () => {
                     <img
                       className="w-4 h-3 text-gray-500 dark:text-gray-400"
                       src={require("../resources/Vector.png")}
+                      alt='img'
                     />
                   </div>
 
@@ -150,6 +152,7 @@ const Index = () => {
                     <img
                       className="w-4 h-4 text-gray-500 dark:text-gray-400"
                       src={require("../resources/lock-password-line.png")}
+                      alt='img'
                     />
                   </div>
 
@@ -175,7 +178,7 @@ const Index = () => {
               </div>
               {/* FORGOT PASSWORD */}
               <div className="w-full flex justify-end ">
-                <a className="text-sm font-semibold underline" href="">
+                <a className="text-sm font-semibold underline" href="/">
                   Forgot Password?
                 </a>
               </div>
@@ -193,7 +196,7 @@ const Index = () => {
                 Don't have an account?
               </p>
             </div>
-            <a className="text-[15px] w-1/2 text-[#5D5CE7] font-semibold" href="">
+            <a className="text-[15px] w-1/2 text-[#5D5CE7] font-semibold" href="/">
               Sing up here
             </a>
           </div>

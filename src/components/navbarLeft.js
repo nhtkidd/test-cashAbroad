@@ -8,6 +8,7 @@ import React from 'react'
             <img
               src={require("../resources/cashBlack.png")}
               className="w-auto h-[34px]"
+              alt='img'
             />
             <div className="w-56 h-96 ">
               <ul>
@@ -15,6 +16,7 @@ import React from 'react'
                   <img
                     src={require("../resources/layout-line.png")}
                     className="w-[24px] h-[24px]"
+                    alt='img'
                   />
                   Dashboard
                 </li>
@@ -22,6 +24,7 @@ import React from 'react'
                   <img
                     src={require("../resources/list-check.png")}
                     className="w-[24px] h-[24px]"
+                    alt='img'
                   />
                   Transactions
                 </li>
@@ -29,6 +32,7 @@ import React from 'react'
                   <img
                     src={require("../resources//secure-payment-fill.png")}
                     className="w-[24px] h-[24px]"
+                    alt='img'
                   />
                   Payments
                 </li>
@@ -36,6 +40,7 @@ import React from 'react'
                   <img
                     src={require("../resources/bank-card-2-line.png")}
                     className="w-[24px] h-[24px]"
+                    alt='img'
                   />
                   Cards
                 </li>
@@ -43,6 +48,7 @@ import React from 'react'
                   <img
                     src={require("../resources/bank-line.png")}
                     className="w-[24px] h-[24px]"
+                    alt='img'
                   />
                   Accounts
                 </li>
@@ -50,6 +56,7 @@ import React from 'react'
                   <img
                     src={require("../resources/arrow-up-down-line.png")}
                     className="w-[24px] h-[24px]"
+                    alt='img'
                   />
                   Exchange
                 </li>
@@ -64,6 +71,7 @@ import React from 'react'
                 <img
                   className="object-cover max-w-none"
                   src={require("../resources/logo-card.png")}
+                  alt='img'
                 />
               </div>
             </div>
@@ -72,7 +80,7 @@ import React from 'react'
               <p className="font-normal text-[#6D7280]">Juvenal Campos</p>
             </div>
             <div className="col-span-1 h-14 flex items-center">
-              <img src={require("../resources/arrow-up-s-line.png")} />
+              <img src={require("../resources/arrow-up-s-line.png")}   alt='img' />
             </div>
           </div>
         </div>

@@ -118,6 +118,7 @@ const Dashboard = () => {
             <img
               className="w-4 h-4 text-gray-500 dark:text-gray-400 "
               src={require("../resources/Group.png")}
+              alt='img'
             />
           </div>
           <input
@@ -136,15 +137,15 @@ const Dashboard = () => {
         <div className="w-full h-16 grid grid-cols-4 lg:grid-cols-9 2xl:grid-cols-12 items-center my-5 gap-1 lg:gap-4">
           <div className="col-span-1 lg:col-span-2 ">
             <button className="h-10 w-full  flex  items-center justify-center gap-1  lg:gap-4 rounded-lg border-2 border-border bg-button shadow-sm text-xs lg:text-sm">
-              <img className='hidden lg:block lg:w-auto lg:h-auto ' src={require("../resources/calendart.png")} />
+              <img className='hidden lg:block lg:w-auto lg:h-auto ' src={require("../resources/calendart.png")}   alt='img'/>
               Last 30 Days
-              <img className='w-[8%] lg:w-auto lg:h-auto '  src={require("../resources/arrowDown.png")} />
+              <img className='w-[8%] lg:w-auto lg:h-auto '  src={require("../resources/arrowDown.png")}  alt='img' />
             </button>
           </div>
           <div className="col-span-1">
             <button className="h-10 w-full  flex  items-center justify-center  gap-1 rounded-lg border-2 border-border bg-button shadow-sm lg:p-1 text-xs lg:text-sm">
               Filter by
-              <img className='w-[10%] lg:w-auto lg:h-auto ' src={require("../resources/arrowDown.png")} />
+              <img className='w-[10%] lg:w-auto lg:h-auto ' src={require("../resources/arrowDown.png")}   alt='img' />
             </button>
           </div>
           <div className="col-span-1 lg:col-span-2 lg:col-end-7  2xl:col-end-8">
@@ -157,10 +158,10 @@ const Dashboard = () => {
           </div>
           <div className=" col-span-1 flex gap-2 ">
             <button className="h-9 text-sm w-14 bg-[#F7F7F8] rounded-md border-2 border-[#EDEFF2] flex items-center justify-center shadow-sm">
-              <img src={require("../resources/ArrowButtonLeft.png")} />
+              <img src={require("../resources/ArrowButtonLeft.png")}   alt='img' />
             </button>
             <button className="h-9 text-sm w-14 bg-barleft rounded-md border-2 border-border flex items-center justify-center shadow-sm">
-              <img src={require("../resources/ArrowButton.png")} />
+              <img src={require("../resources/ArrowButton.png")}   alt='img' />
             </button>
           </div>
         </div>
@@ -203,7 +204,7 @@ const Dashboard = () => {
                   className="px-6 py-4 text-gray-table font-normal 2xl:w-[15%] "
                 >
                  <div className="flex items-center gap-2">
-                 <img src={require("../resources/coin.png")} /> Payment Method
+                 <img src={require("../resources/coin.png")}   alt='img'/> Payment Method
                  </div>
                 </th>
               </tr>
@@ -224,13 +225,13 @@ const Dashboard = () => {
             </div>
             <div className="hidden lg:block lg:col-span-6 2xl:col-span-7 "></div>
             <div className="col-span-7 lg:col-span-3 2xl:col-span-2  grid grid-cols-6  gap-2">
-            <button className="bg-[#F7F7F8] hover:bg-[#5D5CE7]  border-2 border-[#EDEFF2] text-center flex justify-center items-center w-full  h-[40px] rounded-md text-gray-text col-span-1"> <img src={require("../resources/ArrowButtonLeft.png")} /></button>
+            <button className="bg-[#F7F7F8] hover:bg-[#5D5CE7]  border-2 border-[#EDEFF2] text-center flex justify-center items-center w-full  h-[40px] rounded-md text-gray-text col-span-1"> <img src={require("../resources/ArrowButtonLeft.png")}   alt='img'/></button>
                 {numbers.map((number,index)=>{
                   return (
                     <button key={index} className="bg-button hover:bg-[#5D5CE7] hover:text-white border-2 border-border text-center flex justify-center items-center rounded-md w-full text-gray-text col-span-1 font-bold">{number}</button>
                   )
                 })}
-              <button className="bg-barleft hover:bg-[#5D5CE7] border-2 border-border text-center flex justify-center items-center w-full h-[40px] rounded-md text-gray-text col-span-1"><img src={require("../resources/ArrowButton.png")} /></button>
+              <button className="bg-barleft hover:bg-[#5D5CE7] border-2 border-border text-center flex justify-center items-center w-full h-[40px] rounded-md text-gray-text col-span-1"><img src={require("../resources/ArrowButton.png")}   alt='img' /></button>
             </div>
         </div>
       </div>
