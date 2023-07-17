@@ -7,7 +7,6 @@ const Index = () => {
   // const google = window.google;
   let navigate = useNavigate();
   const [data, setData] = useState({});
-  const [ user, setUser ] = useState([]);
   const [errorMessageEmail, setErrorMessageerrorMessageEmail] = useState("");
   const [errorMessagePass, setErrorMessageerrorMessagePass] = useState("");
 
