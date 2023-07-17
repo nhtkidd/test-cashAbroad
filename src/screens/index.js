@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -61,6 +61,37 @@ const Index = () => {
     });
   };
 
+  const Button =()=>{
+    return (
+      <>
+        <div
+              id="g_id_onload"
+              data-client_id="873532400898-2tbejipkmu828iigifk2rthrrf0lv4qt.apps.googleusercontent.com"
+              data-context="signin"
+              data-ux_mode="popup"
+              data-callback="handleCallbackResponse"
+              data-auto_prompt="false"
+            ></div>
+            <div
+              className="g_id_signin"
+              data-type="standard"
+              data-shape="pill"
+              data-theme="outline"
+              data-text="signin"
+              data-size="large"
+              data-logo_alignment="center"
+              data-width="360"
+            ></div>
+      </>
+    )
+  }
+
+  useEffect(() => {
+
+    Button()
+  }, [])
+  
+
   return (
     <div className="login w-full h-full flex ">
       <div className="first-container-img  hidden lg:flex w-1/2 h-[100vh] items-end ">
@@ -87,24 +118,8 @@ const Index = () => {
             <p className="text-sm font-bold text-[#4B5563]">
               Sing in With Google
             </p>
-            <div
-              id="g_id_onload"
-              data-client_id="873532400898-2tbejipkmu828iigifk2rthrrf0lv4qt.apps.googleusercontent.com"
-              data-context="signin"
-              data-ux_mode="popup"
-              data-callback="handleCallbackResponse"
-              data-auto_prompt="false"
-            ></div>
-            <div
-              className="g_id_signin"
-              data-type="standard"
-              data-shape="pill"
-              data-theme="outline"
-              data-text="signin"
-              data-size="large"
-              data-logo_alignment="center"
-              data-width="360"
-            ></div>
+            <Button></Button>
+          
           </div>
           <div className="form-container flex flex-col gap-4 w-full">
             <p className="text-sm font-bold text-[#4B5563]">
