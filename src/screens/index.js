@@ -1,5 +1,6 @@
-import React, {  useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import { GoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -11,28 +12,35 @@ const Index = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    if(validateEmail(e?.target?.email?.value) && validatePassword(e?.target?.password?.value)){
-      console.log('ambos true');
+    if (
+      validateEmail(e?.target?.email?.value) &&
+      validatePassword(e?.target?.password?.value)
+    ) {
+      console.log("ambos true");
       return navigate("/dashboard");
-
     }
   };
 
   const validatePassword = (password) => {
-    const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$/;
+    const passwordRegex =
+      /^(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$/;
     const validatePasswordRegex = passwordRegex.test(password);
-    if(password !== ""){
-        if(password.length >= 8){
-            if(validatePasswordRegex){
-              setErrorMessageerrorMessagePass('')
-              return true;
-            }else{
-              setErrorMessageerrorMessagePass("Tu contraseña debe tener al menos 1 numero y un caracter especial");
-            }
-        }else{
-          setErrorMessageerrorMessagePass("Tu contraseña debe tener al menos 8 caracteres");
+    if (password !== "") {
+      if (password.length >= 8) {
+        if (validatePasswordRegex) {
+          setErrorMessageerrorMessagePass("");
+          return true;
+        } else {
+          setErrorMessageerrorMessagePass(
+            "Tu contraseña debe tener al menos 1 numero y un caracter especial"
+          );
         }
-    }else{
+      } else {
+        setErrorMessageerrorMessagePass(
+          "Tu contraseña debe tener al menos 8 caracteres"
+        );
+      }
+    } else {
       setErrorMessageerrorMessagePass("Por favor, completa este campo.");
     }
   };
@@ -61,36 +69,25 @@ const Index = () => {
     });
   };
 
-  const Button =()=>{
+  const login = useGoogleLogin({
+    onSuccess: (codeResponse) => console.log(codeResponse),
+    flow: "auth-code",
+  });
+
+  const MyCustomButton = ()=>{
     return (
-      <>
-        <div
-              id="g_id_onload"
-              data-client_id="873532400898-2tbejipkmu828iigifk2rthrrf0lv4qt.apps.googleusercontent.com"
-              data-context="signin"
-              data-ux_mode="popup"
-              data-callback="handleCallbackResponse"
-              data-auto_prompt="false"
-            ></div>
-            <div
-              className="g_id_signin"
-              data-type="standard"
-              data-shape="pill"
-              data-theme="outline"
-              data-text="signin"
-              data-size="large"
-              data-logo_alignment="center"
-              data-width="360"
-            ></div>
-      </>
+      <button onClick={() => login()}   className="w-[22rem] h-[54px] bg-[#FCFCFC] border-2 border-border rounded-full text-white flex justify-center items-center cursor-pointer">
+        <img
+            src={require("../resources/google.png")}
+            className="w-4 "
+            alt="img"
+          />
+      </button>
     )
   }
 
   useEffect(() => {
-
-    Button()
-  }, [])
-  
+  }, []);
 
   return (
     <div className="login w-full h-full flex ">
@@ -99,7 +96,7 @@ const Index = () => {
           <img
             src={require("../resources/mediumLogo.png")}
             className="w-auto h-16 2xl:h-20"
-            alt='img'
+            alt="img"
           />
           <h2 className="text-white text-2xl 2xl:text-3xl font-bold">
             Unlock Your Business
@@ -112,14 +109,16 @@ const Index = () => {
       </div>
       <div className="second-container-login w-full lg:w-1/2 h-[100vh] flex justify-center items-center ">
         <div className="form-container w-[360px] h-auto text-center flex flex-col items-center gap-9 ">
-          <img src={require("../resources/Spark.png")}   alt='img' />
+          <img src={require("../resources/Spark.png")} alt="img" />
           <h2 className="text-2xl font-bold">Good Morning!</h2>
           <div className="button-google flex flex-col gap-2">
             <p className="text-sm font-bold text-[#4B5563]">
               Sing in With Google
             </p>
-            <Button></Button>
-          
+            <MyCustomButton >
+           
+            </MyCustomButton>
+            
           </div>
           <div className="form-container flex flex-col gap-4 w-full">
             <p className="text-sm font-bold text-[#4B5563]">
@@ -137,7 +136,7 @@ const Index = () => {
                     <img
                       className="w-4 h-3 text-gray-500 dark:text-gray-400"
                       src={require("../resources/Vector.png")}
-                      alt='img'
+                      alt="img"
                     />
                   </div>
 
@@ -167,7 +166,7 @@ const Index = () => {
                     <img
                       className="w-4 h-4 text-gray-500 dark:text-gray-400"
                       src={require("../resources/lock-password-line.png")}
-                      alt='img'
+                      alt="img"
                     />
                   </div>
 
@@ -200,7 +199,7 @@ const Index = () => {
               {/* INPUT SUBMIT */}
               <input
                 type="submit"
-                className="w-full h-[54px] bg-[#111827] rounded-full text-white mt-5"
+                className="w-full h-[54px] bg-[#111827] rounded-full text-white mt-5 cursor-pointer"
                 value="Log in"
               />
             </form>
@@ -211,7 +210,10 @@ const Index = () => {
                 Don't have an account?
               </p>
             </div>
-            <a className="text-[15px] w-1/2 text-[#5D5CE7] font-semibold" href="/">
+            <a
+              className="text-[15px] w-1/2 text-[#5D5CE7] font-semibold"
+              href="/"
+            >
               Sing up here
             </a>
           </div>
