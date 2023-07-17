@@ -175,7 +175,7 @@ const Index = () => {
               </div>
               {/* FORGOT PASSWORD */}
               <div className="w-full flex justify-end ">
-                <a className="text-sm font-semibold underline">
+                <a className="text-sm font-semibold underline" href="">
                   Forgot Password?
                 </a>
               </div>
@@ -193,7 +193,7 @@ const Index = () => {
                 Don't have an account?
               </p>
             </div>
-            <a className="text-[15px] w-1/2 text-[#5D5CE7] font-semibold">
+            <a className="text-[15px] w-1/2 text-[#5D5CE7] font-semibold" href="">
               Sing up here
             </a>
           </div>
