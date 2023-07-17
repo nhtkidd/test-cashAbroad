@@ -112,7 +112,7 @@ const Dashboard = () => {
   return (
     <div className=" flex w-auto h-[100vh]">
       <NavbarLeft></NavbarLeft>
-      <div className="dashboard-content w-full bg-dashboard pl-5 pr-5 lg:pr-10">
+      <div className="dashboard-content w-full bg-dashboard pl-5 pr-5 lg:pr-10 flex flex-col">
         <div className="relative w-full lg:w-[50%] flex justify-center py-8">
           <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none bg-transparent">
             <img
@@ -164,7 +164,7 @@ const Dashboard = () => {
             </button>
           </div>
         </div>
-        <div className="w-full h-[50%] bg-white rounded-lg overflow-auto my-5">
+        <div className="w-full h-3/6 bg-white rounded-lg overflow-auto my-5">
           <table className="min-w-full text-left text-sm font-light">
             <thead className="border-b font-medium border-border w-full">
               <tr>
@@ -216,7 +216,7 @@ const Dashboard = () => {
             </tbody>
           </table>
         </div>
-        <div className="w-full mt-[6%] grid grid-cols-12 lg:grid-cols-11 ">
+        <div className="w-full self-end grid grid-cols-12 lg:grid-cols-11 mt-[3%]">
             <div className=" col-span-5 lg:col-span-2  flex items-center gap-2">
               <p className="text-gray-text text-xs lg:text-sm">Go to</p>
               <div className="bg-button text-center flex justify-center items-center w-[50px]  h-[40px] rounded-md text-gray-text">10</div>
